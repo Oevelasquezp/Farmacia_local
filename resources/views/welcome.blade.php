@@ -11,9 +11,9 @@
         <div class="max-w-md">
           <h1 class="mb-5 text-5xl font-bold">Bienvenidos a Farmacia local</h1>
           <p class="mb-5">
-           Donde encontraras tus productos de primera necesidad!
+           Donde encontraras productos de primera necesidad!
           </p>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary">Iniciar</button>
         </div>
       </div>
   </div>

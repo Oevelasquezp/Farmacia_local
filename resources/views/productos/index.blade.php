@@ -8,7 +8,7 @@
     <div class="card bg-base-100 w-96 shadow-xl">
       <figure>
         <img
-          src="https://picsum.photos/id/ {{ $producto->id }}/240"
+          src="https://picsum.photos/id/{{ $producto->id }}/240"
           alt="{{ $producto->nombre }}" />
       </figure>
       <div class="card-body">

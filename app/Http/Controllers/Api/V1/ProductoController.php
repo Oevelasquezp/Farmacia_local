@@ -13,8 +13,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        $productos = Producto::all();
-        return view('productos.index', compact('productos'));
+    return response()->json(Producto::all(), 200); //200: OK
     }
 
     /**
@@ -23,7 +22,7 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         // Validar Productos 
- $datos = $request->validate([
+    $datos = $request->validate([
     'nombre' =>['required', 'string', 'max:100'],
     'descripcion' =>['nullable','string', 'max:255'],
     'precio' =>['required', 'integer', 'min:1000'],
@@ -49,7 +48,7 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
       // Validar datos de entrada
- $datos = $request->validate([
+    $datos = $request->validate([
     'nombre' =>['required', 'string','max:100'],
     'descripcion' =>['nullable','string', 'max:255'],
     'precio' =>['required', 'integer','min:1000'],
@@ -67,9 +66,9 @@ class ProductoController extends Controller
     public function destroy(Producto $producto)
     {
         // Eliminar Producto
- $producto->delete();
- // Respuesta al Cliente
- return response()->json(['success' => true,'message' => 'Producto eliminado'], 200);
+    $producto->delete();
+    // Respuesta al Cliente
+    return response()->json(['success' => true,'message' => 'Producto eliminado'], 200);
 
     }
 }
